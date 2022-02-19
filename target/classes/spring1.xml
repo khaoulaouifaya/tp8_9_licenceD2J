@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+      					 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		    <bean id="ctrl" class="test.jpa.controllers.clientController" scope="prototype">
+		    
+		    <property name="daoOnClass" ref="daoCls" />
+		    
+		    
+		     <property name="daoCommande" ref="daoCommande" />
+		    
+		    </bean>
+
+		<bean id="daoCls" class="test.jpa.dao.clientDaoImpliment" scope="prototype">
+		</bean>
+		
+		
+	<bean id="daoCommande" class="test.jpa.dao.commandeImplement" scope="prototype">
+	
+		</bean>
+		
+		
+		
+		
+</beans>
